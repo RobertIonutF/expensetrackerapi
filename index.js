@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 // Routes
 app.use('/api/users', userRoute);
